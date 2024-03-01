@@ -1,63 +1,35 @@
 package org.ptech.java.citas.entities;
 
-public class Medico {
-   private int id;
-   private String nombre;
-   private String apellido;
-   private TipoDocumento tipoDocumento;
-   private Long numeroDocumento;
-   private long registroMedico;
-   private Especialidad especialidad;
-public Medico() {
-}
+import org.ptech.java.citas.entities.enums.Especialidad;
+import org.ptech.java.citas.entities.enums.TipoDocumento;
 
-//POR REGLA GENERAL
-//Los atributos de una clase sea cual sea deben ser private
-public Medico(int id, String nombre, String apellido, TipoDocumento tipoDocumento, Long numeroDocumento,
-        long registroMedico, Especialidad especialidad) {
-    this.id = id;
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.tipoDocumento = tipoDocumento;
-    this.numeroDocumento = numeroDocumento;
-    this.registroMedico = registroMedico;
-    this.especialidad = especialidad;
-}
+public class Medico extends Usuario {
+    private long registroMedico;
+    private Especialidad especialidad;
 
-  //Getters y Setters deben ser publicos
-public String getNombre() {
-    //return sirve para retomar el valor al invocante
-    return this.nombre;
-}
+    public Medico(int id, String nombre, String apellido, TipoDocumento tipoDocumento, Long numeroDocumento,
+            long registroMedico, Especialidad especialidad) {
+        super(id, nombre, apellido, tipoDocumento, numeroDocumento);
+        this.registroMedico = registroMedico;
+        this.especialidad = especialidad;
+    }
 
-public void setNombre(String nombre) {
-    this.nombre = nombre;
-}
+    public long getRegistroMedico() {
+        return registroMedico;
+    }
 
-public String getApellido() {
-    return apellido;
-}
+    public void setRegistroMedico(long registroMedico) {
+        this.registroMedico = registroMedico;
+    }
 
-public void setApellido(String apellido) {
-    this.apellido = apellido;
-}
+    public Especialidad getEspecialidad() {
+        return especialidad;
+    }
 
-public TipoDocumento getTipoDocumento() {
-    return tipoDocumento;
-}
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
+    }
 
-public void setTipoDocumento(TipoDocumento tipoDocumento) {
-    this.tipoDocumento = tipoDocumento;
-}
+    
 
-public Long getNumeroDocumento() {
-    return numeroDocumento;
 }
-
-public void setNumeroDocumento(Long numeroDocumento) {
-    this.numeroDocumento = numeroDocumento;
-}
-
-   
-}
-
