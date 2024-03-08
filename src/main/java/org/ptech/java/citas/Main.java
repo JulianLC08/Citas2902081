@@ -25,7 +25,8 @@ public class Main {
         for( String pr : e1.getProcedimientos()){
             System.out.println(" Procedimiento: " + pr);
         }
-
+        
+        
     }
 
 }

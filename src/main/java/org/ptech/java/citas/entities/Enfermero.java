@@ -5,7 +5,15 @@ import org.ptech.java.citas.entities.enums.TipoDocumento;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 public class Enfermero extends Usuario{
+    @Override
+    public String toString() {
+        return "Enfermero [procedimientos=" + procedimientos + "]";
+    }
+
     private List<String> procedimientos;
 
     public Enfermero(int id, String nombre, String apellido, TipoDocumento tipoDocumento, Long numeroDocumento) {

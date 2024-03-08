@@ -2,12 +2,18 @@ package org.ptech.java.citas.entities;
 
 import org.ptech.java.citas.entities.enums.TipoDocumento;
 
-public abstract class Usuario {
+public class Usuario {
     protected int id;
     protected String nombre;
     protected String apellido;
     protected TipoDocumento tipoDocumento;
     protected Long numeroDocumento;
+
+    //sobreescribir el metodo toString
+    public String toString(){
+        return "nombre: " + this.nombre; 
+    }
+
 
     public Usuario(int id, String nombre, String apellido, TipoDocumento tipoDocumento, Long numeroDocumento) {
         this.id = id;
