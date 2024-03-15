@@ -1,4 +1,4 @@
-package org.ptech.java.citas.entities;
+/* package org.ptech.java.citas.entities;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -40,4 +40,4 @@ public class PruebasPolimorfismo {
 
    
 
-}
+} */
